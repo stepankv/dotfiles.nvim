@@ -103,6 +103,9 @@ function M.groups()
     -- Just (just-lsp)
     ["@lsp.type.variable.just"] = { fg = palette.syntax.default.property, italic = true },
 
+    -- Nix (nil_ls)
+    ["@lsp.type.function.nix"] = { fg = palette.syntax.default.function_declaration },
+
     LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
     LspReferenceText = { bg = palette.editor.scope.same_token },
     LspReferenceRead = { bg = palette.editor.scope.read_variable },
