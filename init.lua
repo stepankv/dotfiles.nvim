@@ -1,3 +1,7 @@
+-- https://github.com/petertriho/nvim-scrollbar/issues/121
+-- revert to main and remove next line after 2026-11-16
+vim.g.scrollbar_v2_notice = false
+
 -- Setup <leader> key. Setup must be done before Lazy loading.
 vim.keymap.set("", "<Space>", "<Nop>") -- diable default <Space> behavior:
 vim.g.mapleader = " "

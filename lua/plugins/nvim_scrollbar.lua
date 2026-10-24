@@ -1,23 +1,34 @@
 -- Scrollbar
 return {
   "petertriho/nvim-scrollbar",
+  branch = "refactor/v2",
+  dependencies = { "lewis6991/gitsigns.nvim" },
   opts = {
-    hide_if_all_visible = false,
-    handle = {
-      blend = 0,
-      highlight = "ScrollbarHandle",
+    scrollbar = {
+      hide_if_all_visible = false,
+      layout = {
+        columns = { { "thumb", "marks" } },
+      },
+      thumb = {
+        blend = 0,
+        highlight = "ScrollbarThumb",
+      },
     },
-    handlers = {
+    providers = {
       cursor = false,
       gitsigns = true,
+      search = false,
+      marks = false,
     },
-    excluded_filetypes = {
-      "dropbar_menu",
-      "dropbar_menu_fzf",
-      "DressingInput",
-      "prompt",
-      "NvimTree",
-      "lazy",
+    exclude = {
+      filetypes = {
+        "dropbar_menu",
+        "dropbar_menu_fzf",
+        "DressingInput",
+        "prompt",
+        "NvimTree",
+        "lazy",
+      },
     },
     marks = {
       Error = {
