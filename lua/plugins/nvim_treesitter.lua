@@ -10,6 +10,7 @@ local langs = {
   "rust",
   "kotlin",
   "java",
+  "scala",
   "json",
   "toml",
   "yaml",
