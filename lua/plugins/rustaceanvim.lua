@@ -5,6 +5,9 @@ return {
   config = function()
     vim.g.rustaceanvim = {
       server = {
+        -- use the rustup-managed rust-analyzer instead of the standalone binary,
+        -- so that the project's toolchain (stable/nightly) and its sysroot resolve correctly
+        cmd = { "rustup", "run", "stable", "rust-analyzer" },
         default_settings = {
           ["rust-analyzer"] = {
             check = {
