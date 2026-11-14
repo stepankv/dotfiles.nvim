@@ -12,6 +12,10 @@ require("config.options")
 require("config.keymaps")
 require("config.commands")
 
+vim.lsp.config("kotlin_lsp", {
+  cmd = { "kotlin-lsp", "--stdio" },
+})
+
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 vim.lsp.enable({
   "lua_ls",
@@ -24,4 +28,5 @@ vim.lsp.enable({
   "basedpyright",
   "ruff",
   "nil_ls",
+  "kotlin_lsp",
 })
