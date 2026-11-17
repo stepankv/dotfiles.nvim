@@ -43,11 +43,17 @@ map("n", "<M-Down>", "<cmd>resize -2<cr>", opts({ desc = "Decrease window height
 map("n", "<M-Left>", "<cmd>vertical resize -2<cr>", opts({ desc = "Decrease window width" }))
 map("n", "<M-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase window width" }))
 
--- Move cursours between wiindows
-map("n", "<M-k>", "<cmd>wincmd k<cr>", opts({ desc = "Move cursor to window below current" }))
-map("n", "<M-j>", "<cmd>wincmd j<cr>", opts({ desc = "Move cursor to window above current" }))
+-- Move cursor between windows
+map("n", "<M-k>", "<cmd>wincmd k<cr>", opts({ desc = "Move cursor to window above current" }))
+map("n", "<M-j>", "<cmd>wincmd j<cr>", opts({ desc = "Move cursor to window below current" }))
 map("n", "<M-h>", "<cmd>wincmd h<cr>", opts({ desc = "Move cursor to window left of current" }))
 map("n", "<M-l>", "<cmd>wincmd l<cr>", opts({ desc = "Move cursor to window right of current" }))
+
+-- Same physical keys on the Russian keyboard layout
+map("n", "<M-л>", "<cmd>wincmd k<cr>", opts({ desc = "Move cursor to window above current" }))
+map("n", "<M-о>", "<cmd>wincmd j<cr>", opts({ desc = "Move cursor to window below current" }))
+map("n", "<M-р>", "<cmd>wincmd h<cr>", opts({ desc = "Move cursor to window left of current" }))
+map("n", "<M-д>", "<cmd>wincmd l<cr>", opts({ desc = "Move cursor to window right of current" }))
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
